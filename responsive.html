@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Responsive Form</title>
+</head>
+<body>
+    <section id="section1">
+        <h1>Learn to code by watching others</h1>
+        <p>
+            See how experienced developers solve problems in real-time. wathcing
+            scripted tutorials is great but understanding how developers think is 
+            invaluable.
+        </p>
+    </section>
+    
+    <section id="section2">
+        <button id="blueButton">Try it free 7 days then $20/mo. thereafter</button>
+        <form method="post" id="form">
+            <div class="formControl">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                <small>First Name cannot be empty</small>
+            </div>
+
+            <div class="formControl">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                <small>Last Name cannot be empty</small>
+            </div>
+
+            <div class="formControl">
+                <input type="text" id="email" name="email" placeholder="Email Address">
+                <small>Looks like this is not an email</small>
+            </div>
+
+            <div class="formControl">
+                <input type="text" id="password" name="password" placeholder="Password">
+                <small>Password cannot be empty</small>
+            </div>
+
+            <button type="submit" id="greenButton">CLAIM YOUR FREE TRAIL</button>
+            <p id="small">
+                By clicking this button, you are agreeing to our <a>Terms and Services</a>
+            </p>
+        </form>
+    </section>
+    <script src="responsive.js"></script>
+</body>
+</html>

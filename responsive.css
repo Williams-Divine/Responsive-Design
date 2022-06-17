@@ -1,0 +1,151 @@
+:root{
+    --success-color:hsl(154, 59%, 51%);
+    --error-color:hsl(0, 100%, 74%);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(bg-intro-desktop.png);
+    background: no-repeat cover;
+    background-color: hsl(0, 100%, 74%);
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-areas: 'section1 section2';
+    grid-column-gap: 2rem;
+    min-height: 100vh;
+    padding: 9%;
+}
+section{
+    max-height: 80%;
+}
+button{
+    color:white;
+    border:none;
+}
+/*section 1*/
+#section1{
+    grid-area: section1;
+    color: white;
+    margin: auto;
+}
+#section1 h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#section1 p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/*section 2*/
+#section2{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+/*generals for section2*/
+button:hover,button:active{
+    cursor: pointer;
+}
+#blueButton,form{
+    box-shadow: 0 5px 2px hsla(248, 32%, 49%, 0.438);
+}
+#section2 input, button{
+    width:100%;
+    padding:.6rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+div,button{
+    margin-bottom: 1rem;
+}
+
+/*singles*/
+#blueButton{
+    background-color: hsl(248, 32%, 49%);
+    height: fit-content;
+}
+/*FORM starts here*/
+#section2 form{
+    background-color: white;
+    padding:7%;
+    border-radius:5px;
+    max-height: 80vh;
+}
+.formControl{
+    height:15%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.formControl.success input{
+    border-color: var(--success-color);
+}
+.formControl.error input{
+    border-color: var(--error-color);
+}
+input{
+    border: 2px solid hsl(246, 25%, 77%);
+    font-weight:600;
+    color: hsl(249, 10%, 26%) ;
+}
+input::placeholder{
+    color:hsl(249, 10%, 26%);
+}
+input:focus,input:active{
+    outline:0;
+    border:2px solid hsl(249, 10%, 26%)   ;
+    cursor: pointer;
+}
+.formControl small{
+    position:absolute ;
+    color: var(--error-color);
+    visibility: hidden;
+    bottom: 0;
+    align-self: flex-end;
+    font-size:.7rem;
+    font-weight: 500;
+}
+.formControl.error small{
+    visibility: visible;
+}
+#greenButton{
+    max-height: 15%;
+    background-color: hsl(154, 59%, 51%);
+}
+#small,a{
+    color:hsl(246, 25%, 77%);
+    font-size:.7rem;
+    font-weight:400;
+    text-align: center;
+}
+a{
+    color: hsl(0, 100%, 74%) ;
+}
+/*end of section 2*/
+
+/*Media Query*/
+@media screen and (max-width: 500px) {
+    body{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+        grid-template-areas: "section1 "
+                             "section2";
+        background-image:url(bg-intro-mobile.png) ;
+    }
+    #section1{
+        grid-area: section1;
+    }
+    #section2{
+        grid-area:section2;
+        max-height: 50vh;
+
+    }}
