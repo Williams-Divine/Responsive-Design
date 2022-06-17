@@ -147,6 +147,9 @@ a{
     #section1{
         grid-area: section1;
     }
+    #section1 p,h1{
+        text-align: center;
+    }
     #section2{
         grid-area:section2;
         height: fit-content;
