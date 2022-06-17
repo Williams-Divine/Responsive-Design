@@ -14,10 +14,9 @@ body{
     background: no-repeat cover;
     background-color: hsl(0, 100%, 74%);
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'section1 section2';
     grid-column-gap: 2rem;
-    min-height: 100vh;
     padding: 9%;
 }
 section{
@@ -136,7 +135,7 @@ a{
 @media screen and (max-width: 500px) {
     body{
         display:grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: .5fr 1fr;
         grid-template-columns: none;
         grid-template-areas: "section1 "
                              "section2";
@@ -147,6 +146,6 @@ a{
     }
     #section2{
         grid-area:section2;
-        max-height: 50vh;
+        height: fit-content;
 
     }}
